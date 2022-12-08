@@ -1,0 +1,812 @@
+/* --------------- Website Theme --------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Do+Hyeon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Do+Hyeon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --accent: linear-gradient(98.01deg, #F05454 -21.15%, #FF006B 141.32%);
+    --primary: #2b3138;
+    --secondary: #202329;
+    --text-primary: #fff;
+    --text_secondary: #ccc;
+    --text-bg: #252932;
+    --dark: #222831;
+    --section-padding: 1rem;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #171717;
+    overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+p {
+    font-size: 0.7em;
+    color: var(--text_secondary);
+    line-height: 21px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* End Startup Theme */
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: #171717;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: drop 7s 0s infinite;
+    animation: drop 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+    margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+    margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+.ash {
+    position: absolute;
+    width: 63px;
+    height: 45px;
+    left: 81px;
+    top: 40px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 3px;
+    padding: 0 1.5rem;
+    position: absolute;
+    top: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    position: relative;
+    left: 600px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 400;
+
+}
+
+nav ul li {
+    margin: 0 3.5em 0 0;
+    top: 10%;
+}
+
+nav ul a {
+    padding-bottom: 0.7em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+nav ul a:hover {
+    padding-bottom: 0.7em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #FF006B;
+    transition: .7s;
+}
+
+
+
+.line-nav {
+    position: relative;
+    width: 89%;
+    height: 0px;
+    left: 80.99px;
+    top: 105px;
+
+    border: 1px solid #373737;
+}
+
+.cons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: absolute;
+    left: 71.5%;
+    justify-content: right;
+    align-item: right;
+}
+
+
+.sign-b {
+    position: relative;
+    width: 90px;
+    height: 30px;
+    left: 88.5%;
+    top: 50px;
+    padding: 3px 22px 20px;
+    color: #fff;
+
+    background: linear-gradient(98.01deg, #F05454 -21.15%, #FF006B 141.32%);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sign-b a {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+.sign {
+    position: relative;
+    width: 90px;
+    height: 30px;
+    left: 88.5%;
+    top: 50px;
+    padding: 3px 22px 20px;
+    color: #fff;
+
+    background: linear-gradient(98.01deg, #F05454 -21.15%, #FF006B 141.32%);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sign a {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+.sign2 {
+    position: relative;
+    width: 90px;
+    height: 30px;
+    left: 88.5%;
+    top: 50px;
+    padding: 3px 17px 20px;
+    color: #fff;
+
+    background: linear-gradient(98.01deg, #F05454 -21.15%, #FF006B 141.32%);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sign2 a {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+
+}
+
+
+.header-line {
+    position: absolute;
+    width: 170px;
+    height: 0px;
+    left: 316px;
+    top: 200px;
+
+    border: 1px solid #606060;
+}
+
+.honc {
+
+    position: absolute;
+    width: 224px;
+    height: 21px;
+    left: 520px;
+    top: 190px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+
+    color: #606060;
+
+
+}
+
+.header-first {
+    position: absolute;
+    width: 1104px;
+    height: 94px;
+    left: 315px;
+    top: 210px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 94px;
+
+    color: #FFFFFF;
+}
+
+
+.div-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+.div-2-v {
+    max-width: 707px;
+    color: rgba(255, 255, 255, 1);
+    lfont-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+
+    color: #FFFFFF;
+}
+
+.div-3-v {
+    display: flex;
+    max-width: 763.0006713867188px;
+    height: 0px;
+    width: 763.0006713867188px;
+    margin-top: 39px;
+    border-color: rgba(55, 55, 55, 1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.ashurbanipal-was-known-as-a-te {
+    max-width: 672px;
+    margin-top: 39px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.container-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 145px;
+}
+
+.card {
+    position: relative;
+    width: 380px;
+    height: 620px;
+    left: 37.7%;
+    top: 300px;
+
+    background: #202020;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+
+}
+
+.header-c4 {
+    position: absolute;
+    width: 218px;
+    height: 35px;
+    left: 23%;
+    top: 40px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+
+    color: #FFFFFF;
+}
+
+small {
+    position: absolute;
+    width: 672px;
+    height: 116px;
+    left: -41.5%;
+    top: 85px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+small span {
+    color: #FF006B;
+}
+
+.image-c4-back {
+    position: absolute;
+    width: 290px;
+    height: 427px;
+    left: 12.2%;
+    top: 22%;
+
+    /* background: url(https://images.ctfassets.net/usf1vwtuqyxm/3d9kpFpwHyjACq8H3EU6ra/85673f9e660407e5e4481b1825968043/English_Harry_Potter_4_Epub_9781781105672.jpg?w=914&q=70&fm=jpg); */
+    opacity: 0.25;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.image-c4-front {
+    position: absolute;
+    width: 259px;
+    height: 400px;
+    left: 16.5%;
+    top: 24.5%;
+
+    /* background: url(https://images.ctfassets.net/usf1vwtuqyxm/3d9kpFpwHyjACq8H3EU6ra/85673f9e660407e5e4481b1825968043/English_Harry_Potter_4_Epub_9781781105672.jpg?w=914&q=70&fm=jpg); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.line-c4 {
+    position: absolute;
+    width: 1450px;
+    height: 0px;
+    left: 78px;
+    top: 4300px;
+
+    border: 1px solid #373737;
+
+}
+
+
+
+.containers {
+    max-width: 1560px;
+    margin: auto;
+    position: relative;
+    top: 450px;
+    left: 5%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+
+.container-detail {
+    position: absolute;
+    width: 1420px;
+    height: 840px;
+
+    background: #202020;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    top: 25%;
+    left: 5%;
+
+}
+
+.image-5-back {
+    position: absolute;
+    width: 440px;
+    height: 610px;
+    left: 5%;
+    top: 13.5%;
+
+    /* background: url(https://images.ctfassets.net/usf1vwtuqyxm/3d9kpFpwHyjACq8H3EU6ra/85673f9e660407e5e4481b1825968043/English_Harry_Potter_4_Epub_9781781105672.jpg?w=914&q=70&fm=jpg); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.25;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+
+}
+
+.image-5-front {
+
+    position: absolute;
+    width: 400px;
+    height: 560px;
+    left: 6.3%;
+    top: 16.5%;
+
+    /* background: url(https://images.ctfassets.net/usf1vwtuqyxm/3d9kpFpwHyjACq8H3EU6ra/85673f9e660407e5e4481b1825968043/English_Harry_Potter_4_Epub_9781781105672.jpg?w=914&q=70&fm=jpg); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: 0px 4px 20px 14px rgba(0, 0, 0, 0.25);
+}
+
+.header-5 {
+    position: absolute;
+    width: 600px;
+    height: 53px;
+    left: 47%;
+    top: 12%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+
+
+    color: #FFFFFF;
+
+}
+
+.line-5 {
+
+    position: absolute;
+    width: 650px;
+    height: 0px;
+    left: 46.9%;
+    top: 25%;
+
+    border: 1px solid #373737;
+}
+
+.sub-header-5 {
+    position: absolute;
+    width: 763px;
+    height: 26px;
+    left: 47.1%;
+    top: 18.5%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    /* identical to box height */
+
+    text-align: justify;
+
+    color: #FFFFFF;
+
+}
+
+.sub-header-5 span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+
+
+    color: #FF006B;
+
+}
+
+.paragraf-details {
+
+    position: relative;
+    width: 650px;
+    height: 156px;
+    left: 47.1%;
+    top: 33%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: justify;
+
+    color: #FFFFFF;
+
+
+}
+
+.div-x {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 1300px;
+}
+
+.div-2-x {
+    max-width: 707px;
+    color: rgba(255, 255, 255, 1);
+    lfont-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+
+    color: #FFFFFF;
+}
+
+.div-3-x {
+    display: flex;
+    max-width: 763.0006713867188px;
+    height: 0px;
+    width: 763.0006713867188px;
+    margin-top: 39px;
+    border-color: rgba(55, 55, 55, 1);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.ashurbanipal-was-known-as-a-te-x {
+    max-width: 672px;
+    margin-top: 39px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.container-x {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 145px;
+}
+
+.card-x {
+    position: relative;
+    width: 380px;
+    height: 620px;
+    left: 5%;
+    top: 1450px;
+
+    background: #202020;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+
+}
+
+.explore-d {
+    position: absolute;
+
+    height: 35px;
+    width: 155px;
+    top: -55px;
+    padding: 5px 60px 10px;
+    left: 105px;
+    color: #fff;
+
+    border-radius: 100px;
+
+
+
+    background: linear-gradient(94.47deg, #F05454 -13.99%, #FF006B 185.19%);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+
+}
+
+.explore-d a {
+    font-size: 13px;
+
+}
